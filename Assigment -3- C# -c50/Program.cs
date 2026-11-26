@@ -93,17 +93,35 @@
             // Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             // Call it and print pages afterward. How is the result different from question 5?
 
-            int pages = 400;
+            //int pages = 400;
 
-            AddBonusPagesByRef(ref pages);
+            //AddBonusPagesByRef(ref pages);
 
-            Console.WriteLine(pages);//450 COUSE THIS CALL BY REF
+            //Console.WriteLine(pages);//450 COUSE THIS CALL BY REF
 
             #endregion
 
-            static void AddBonusPagesByRef(ref int pages)
+            //static void AddBonusPagesByRef(ref int pages)
+            //{
+            //    pages += 50;
+            //}
+
+            #region Q8
+            // Write a method ReplaceArray(ref double[] prices) that replaces prices entirely
+            // with a new array { 10.0, 12.5, 15.0 }. Call it with your prices array
+            // and print prices.Length afterward.
+
+            double[] prices = { 25.5, 40.0 };
+
+            ReplaceArray(ref prices);
+
+            Console.WriteLine(prices.Length);
+
+            #endregion
+
+            static void ReplaceArray(ref double[] prices)
             {
-                pages += 50;
+                prices = new double[] { 10.0, 12.5, 15.0 };
             }
         }
     }
