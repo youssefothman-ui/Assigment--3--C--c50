@@ -76,17 +76,34 @@
             // Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.
             // What do you expect to see, and why?
 
-            double[] prices = { 25.5, 40.0 };
+            //double[] prices = { 25.5, 40.0 };
 
-            ApplyDiscount(prices);
+            //ApplyDiscount(prices);
 
-            Console.WriteLine(prices[0]);//20.5 COUSE THIS PASS BY REF
+            //Console.WriteLine(prices[0]);//20.5 COUSE THIS PASS BY 
 
             #endregion
 
-            static void ApplyDiscount(double[] prices)
+            //static void ApplyDiscount(double[] prices)
+            //{
+            //    prices[0] -= 5;
+            //}
+
+            #region Q7
+            // Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            // Call it and print pages afterward. How is the result different from question 5?
+
+            int pages = 400;
+
+            AddBonusPagesByRef(ref pages);
+
+            Console.WriteLine(pages);//450 COUSE THIS CALL BY REF
+
+            #endregion
+
+            static void AddBonusPagesByRef(ref int pages)
             {
-                prices[0] -= 5;
+                pages += 50;
             }
         }
     }
