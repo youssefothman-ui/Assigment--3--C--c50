@@ -44,14 +44,34 @@
             // Write a method PrintBookTitle(string title) that prints "Book title: " + title.
             // Call it with "Clean Code".
 
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
 
             #endregion
 
-            static void PrintBookTitle(string title)
+            //static void PrintBookTitle(string title)
+            //{
+            //    Console.WriteLine("Book title: " + title);
+            //}
+
+            #region Q5
+            // Write a method AddBonusPages(int pages) that adds 50 to pages.
+            // Call it with a variable int pages = 400; and print pages afterward.
+            // What do you expect to see, and why?
+
+            int pages = 400;
+
+            AddBonusPages(pages);
+
+            Console.WriteLine(pages); // 400 COUSE THIS PASS BY VALUE
+
+            #endregion
+
+            static void AddBonusPages(int pages)
             {
-                Console.WriteLine("Book title: " + title);
+                pages += 50;
             }
+
+            
         }
     }
 }
