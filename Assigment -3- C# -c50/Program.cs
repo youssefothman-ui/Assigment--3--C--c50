@@ -58,20 +58,36 @@
             // Call it with a variable int pages = 400; and print pages afterward.
             // What do you expect to see, and why?
 
-            int pages = 400;
+            //int pages = 400;
 
-            AddBonusPages(pages);
+            //AddBonusPages(pages);
 
-            Console.WriteLine(pages); // 400 COUSE THIS PASS BY VALUE
+            //Console.WriteLine(pages); // 400 COUSE THIS PASS BY VALUE
 
             #endregion
 
-            static void AddBonusPages(int pages)
-            {
-                pages += 50;
-            }
+            //static void AddBonusPages(int pages)
+            //{
+            //    pages += 50;
+            //}
 
-            
+            #region Q6
+            // Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].
+            // Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.
+            // What do you expect to see, and why?
+
+            double[] prices = { 25.5, 40.0 };
+
+            ApplyDiscount(prices);
+
+            Console.WriteLine(prices[0]);//20.5 COUSE THIS PASS BY REF
+
+            #endregion
+
+            static void ApplyDiscount(double[] prices)
+            {
+                prices[0] -= 5;
+            }
         }
     }
 }
